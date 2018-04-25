@@ -5,8 +5,9 @@ The L298N chip is a high voltage, high current dual full – bridge motor driver
 
 The driver provides independent control of the speed and direction of the two supported motors. 
 The library consists of two files, the header and the cpp file. The header contains the following interface
-| Function        | Parameters           | Description  |
-| :------------- |:-------------|:-----|
+
+| Function | Parameters | Description  |
+| ------------- | ------------- | ----- |
 | **SetSpeed**  | const int | the speed of the motors, a number between 0-255 |
 | **MotorA_Front**  | none | will drive one motor in one direction |
 | **MotorA_Back** | none| will drive the same motor in different direction |
@@ -14,6 +15,7 @@ The library consists of two files, the header and the cpp file. The header conta
 | **MotorB_Front** | none  |  will drive the other motor in one direction |
 | **MotorB_Back** | none  | will drive the same motor in different direction |
 | **MotorB_Stop** | none | this function will stop the motor B |
+
 The constructor initialization will initialize the driver for one motor or two, depending on the number of arguments.
 ```cpp
 HBridgeL298N(int motorA_InputPin1, int motorA_InputPin2, int motorA_EnablePin,
